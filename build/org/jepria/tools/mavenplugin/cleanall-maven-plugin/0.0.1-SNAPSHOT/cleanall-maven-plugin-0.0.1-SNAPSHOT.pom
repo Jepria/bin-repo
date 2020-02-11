@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.jepria.tools.mavenplugin</groupId>
-  <artifactId>customcleanall-maven-plugin</artifactId>
+  <artifactId>cleanall-maven-plugin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
-  <name>Custom Clean All Maven Plugin</name>
+  <name>Clean All Maven Plugin</name>
 
   <!-- FIXME change it to the project's website -->
   <url>http://maven.apache.org</url>
@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
     <copy.rename.maven.plugin.version>1.0.1</copy.rename.maven.plugin.version>
+    <maven.jar.plugin.version>3.0.0</maven.jar.plugin.version>
   </properties>
 
   <dependencies>
@@ -33,7 +34,7 @@
         <artifactId>maven-plugin-plugin</artifactId>
         <version>3.6.0</version>
         <configuration>
-          <goalPrefix>customcleanall</goalPrefix>
+          <goalPrefix>cleanall</goalPrefix>
           <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
         </configuration>
         <executions>
@@ -48,7 +49,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>${maven.jar.plugin.version}</version>
         <configuration>
           <archive>
             <manifestEntries>
