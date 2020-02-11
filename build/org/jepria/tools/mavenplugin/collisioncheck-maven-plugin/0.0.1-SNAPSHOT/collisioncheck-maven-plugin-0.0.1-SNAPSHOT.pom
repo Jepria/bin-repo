@@ -3,45 +3,45 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.jepria.tools.mavenplugin</groupId>
-  <artifactId>snapshotupdate-maven-plugin</artifactId>
+  <artifactId>collisioncheck-maven-plugin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
-  <name>Maven Snapshot Update Plugin</name>
+  <name>Collision Check Maven Plugin</name>
 
   <!-- FIXME change it to the project's website -->
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
     <copy.rename.maven.plugin.version>1.0.1</copy.rename.maven.plugin.version>
-    <maven.plugin.plugin.version>3.6.0</maven.plugin.plugin.version>
     <maven.jar.plugin.version>3.0.0</maven.jar.plugin.version>
-
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>
       <artifactId>maven-plugin-api</artifactId>
-      <version>3.6.3</version>
+      <version>2.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.maven.plugin-tools</groupId>
       <artifactId>maven-plugin-annotations</artifactId>
-      <version>3.6.0</version>
+      <version>3.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-utils</artifactId>
-      <version>3.3.0</version>
+      <version>3.0.8</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.13</version>
+      <version>4.8.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -61,9 +61,9 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
-        <version>${maven.plugin.plugin.version}</version>
+        <version>3.6.0</version>
         <configuration>
-          <goalPrefix>snapshotupdate</goalPrefix>
+          <goalPrefix>collisioncheck</goalPrefix>
           <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
         </configuration>
         <executions>
