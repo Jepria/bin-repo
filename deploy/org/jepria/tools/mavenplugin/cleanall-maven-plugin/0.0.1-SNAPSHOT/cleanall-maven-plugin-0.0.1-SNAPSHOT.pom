@@ -10,7 +10,7 @@
   <name>Clean All Maven Plugin</name>
 
   <!-- FIXME change it to the project's website -->
-  <url>http://maven.apache.org</url>
+  <url>http://jepria.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -77,7 +77,7 @@
                   <version>${project.version}</version>
                   <type>${project.packaging}</type>
                   <overWrite>true</overWrite>
-                  <outputDirectory>${env.BIN_HOME}/build/org/jepria/tools/mavenplugin/${project.artifactId}/${project.version}</outputDirectory>
+                  <outputDirectory>${env.BIN_HOME}/deploy/org/jepria/tools/mavenplugin/${project.artifactId}/${project.version}</outputDirectory>
                 </artifactItem>
               </artifactItems>
             </configuration>
@@ -98,7 +98,7 @@
             <configuration>
               <overWrite>true</overWrite>
               <sourceFile>${project.basedir}/pom.xml</sourceFile>
-              <destinationFile>${env.BIN_HOME}/build/org/jepria/tools/mavenplugin/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.pom</destinationFile>
+              <destinationFile>${env.BIN_HOME}/deploy/org/jepria/tools/mavenplugin/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.pom</destinationFile>
             </configuration>
           </execution>
         </executions>
